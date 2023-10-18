@@ -1,36 +1,33 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import UserIndex from '@/components/Users/Index'
-import UserEdit from '@/components/Users/EditUser'
-import UserShow from '@/components/Users/ShowUser'
-import UserCreate from '@/components/Users/CreateUser'
+import SpeakerIndex from '@/components/Speakers/Index'
+import SpeakerUpdate from '@/components/Speakers/UpdateSpeaker'
+import SpeakerRead from '@/components/Speakers/ReadSpeaker'
+import SpeakerCreate from '@/components/Speakers/CreateSpeaker'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/user/create',
-      name: 'user-create',
-      component: UserCreate
+      path: '/speaker/create',
+      name: 'speakers-create',
+      component: speakerCreate
     },
     {
-      path: '/user/edit/:userId',
-      name: 'user-edit',
-      component: UserEdit
+      path: '/speaker/update/:speakerId',
+      name: 'speaker-update',
+      component: speakerUpdate
     },
     {
-      path: '/user/:userId',
-      name: 'user',
-      component: UserShow
+      path: '/speaker/:speakerId',
+      name: 'speaker',
+      component: speakerRead
     },
     {
-      path: '/users',
-      name: 'users',
-      component: UserIndex
+      path: '/speakers',
+      name: 'speakers',
+      component: speakerIndex
     },
-
-    
-
   ]
 })
